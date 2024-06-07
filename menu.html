@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Black Bistro</title>
+	<style>
+		body { font-family: Arial, sans-serif; margin: 0; background: #f8f8ff; color: #222; }
+		header { background: #2d2d6e; color: #fff; padding: 1.5em 0 1em 0; text-align: center; }
+		#header-img { width: 120px; border-radius: 50%; box-shadow: 0 2px 8px #2223; }
+		nav { margin: 1em 0; }
+		nav a { color: #fff; margin: 0 1.5em; text-decoration: none; font-weight: bold; font-size: 1.1em; }
+		main { max-width: 800px; margin: 2em auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 12px #2221; padding: 2em; }
+		section { margin-bottom: 2.5em; }
+		.menu-items { display: flex; gap: 2em; flex-wrap: wrap; }
+		article { flex: 1 1 220px; background: #f0f4ff; border-radius: 8px; padding: 1em; margin-bottom: 1em; box-shadow: 0 1px 4px #2221; }
+		article img { width: 100%; border-radius: 6px; }
+		h1, h2, h3 { font-family: 'Segoe UI', sans-serif; }
+		form label { display: block; margin-top: 1em; font-weight: 500; }
+		input[type="number"] { width: 60px; margin-left: 0.5em; }
+		.addons { margin: 0.5em 0 1em 1em; }
+		textarea { width: 100%; min-height: 60px; margin-top: 0.5em; }
+		input[type="submit"] { background: #2d2d6e; color: #fff; border: none; padding: 0.7em 2em; border-radius: 5px; font-size: 1em; margin-top: 1.5em; cursor: pointer; }
+		footer { text-align: center; padding: 1.5em 0; background: #2d2d6e; color: #fff; margin-top: 2em; border-radius: 0 0 10px 10px; }
+	</style>
+</head>
+<body>
+	<header>
+		<img id="header-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=facearea&w=400&h=400&q=80" alt="Black Bistro Logo">
+		<h1>Black Bistro</h1>
+		<nav>
+			<a href="#menu">Menu</a>
+			<a href="#order-form">Place Your Order</a>
+		</nav>
+	</header>
+	<main>
+		<section id="menu">
+			<h2>Menu</h2>
+			<div class="menu-items">
+				<article>
+					<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80" alt="Galactic Burger">
+					<h3>Galactic Burger</h3>
+					<p>A juicy beef patty topped with cosmic cheddar, meteorite onions, and rocket sauce. <br><i>$12.99</i></p>
+				</article>
+				<article>
+					<img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Nebula Salad">
+					<h3>Nebula Salad</h3>
+					<p>Fresh greens, starfruit, and a sprinkle of feta, tossed in a tangy nebula vinaigrette. <br><i>$9.50</i></p>
+				</article>
+				<article>
+					<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Lunar Pasta">
+					<h3>Lunar Pasta</h3>
+					<p>Creamy alfredo sauce over spiral pasta, with moon mushrooms and stardust parmesan. <br><i>$13.75</i></p>
+				</article>
+			</div>
+		</section>
+		<section id="order-form">
+			<h2>Place Your Order</h2>
+			<form>
+				<label for="burger-qty">Galactic Burger Quantity:</label>
+				<input type="number" id="burger-qty" name="burger-qty" min="0" value="0">
+
+				<label for="salad-qty">Nebula Salad Quantity:</label>
+				<input type="number" id="salad-qty" name="salad-qty" min="0" value="0">
+
+				<label for="pasta-qty">Lunar Pasta Quantity:</label>
+				<input type="number" id="pasta-qty" name="pasta-qty" min="0" value="0">
+
+				<fieldset class="addons">
+					<legend>Add Sides & Add-ons:</legend>
+					<input type="checkbox" id="fries" name="addons" value="fries">
+					<label for="fries">Astro Fries (+$3.00)</label><br>
+					<input type="checkbox" id="drink" name="addons" value="drink">
+					<label for="drink">Comet Cola (+$2.50)</label><br>
+					<input type="checkbox" id="dessert" name="addons" value="dessert">
+					<label for="dessert">Milky Way Dessert (+$4.00)</label>
+				</fieldset>
+
+				<fieldset class="addons">
+					<legend>Burger Doneness:</legend>
+					<input type="radio" id="rare" name="doneness" value="rare">
+					<label for="rare">Rare</label>
+					<input type="radio" id="medium" name="doneness" value="medium">
+					<label for="medium">Medium</label>
+					<input type="radio" id="well" name="doneness" value="well">
+					<label for="well">Well Done</label>
+				</fieldset>
+
+				<label for="special-requests">Special Requests:</label>
+				<textarea id="special-requests" name="special-requests" placeholder="Let us know if you have any special requests..."></textarea>
+
+				<input type="submit" value="Go To Checkout">
+			</form>
+		</section>
+	</main>
+	<footer>
+		<p>Made with love by Devart</p>
+	</footer>
+</body>
+</html>
